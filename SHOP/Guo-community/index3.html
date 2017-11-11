@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
+	<style type="text/css">
+		body,ul,h3,ol,p{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: rgb(245,245,245);
+			font-family: '微软雅黑';
+			font-size: 0.28rem;
+		}
+		span{
+			color: #65c4aa;
+		}
+		p{
+			margin: 0.2rem 0;
+		}
+		nav{
+			width: 100%;
+			height: 1.65rem;
+			background: #fff;
+			position: fixed;
+			z-index: 1;
+			top: 0;		
+		}
+		.searchk{
+			width: 100%;
+			height: 1.73rem;
+			display: inline-block;
+			position: relative;
+		}
+		.searchk input{
+			font-size: 0.16rem;
+			width: 5.5rem;
+			height: 0.55rem;
+			border-radius: 0.08rem;
+			border: 0;
+			background: #ebebeb;
+			padding-left: 0.5rem;
+			outline: none;
+			position: absolute;
+			top: 0.18rem;
+			left: 0.34rem;
+		}
+		.searchk #bg1{
+			height: 0.3rem;
+			position: absolute;
+			top: .3rem;
+			left: 0.45rem;
+		}
+		.searchk #bg2{
+			height: 0.3rem;
+			width: 0.4rem;
+			position: absolute;
+			top: .3rem;
+			right: 0.25rem;
+		}
+		.searchk ul{
+			width: 96%;
+			font-size: 0;
+			color: #999;
+			margin: 0.82rem auto;
+		}
+		.searchk ul li{
+			font-size: 0.28rem;
+			display: inline-block;
+			padding: 0.2rem 0 0.16rem;
+			width: 16.6%;
+			text-align: center;
+		}
+		.action{
+			color: #65c4aa;
+			border-bottom: .08rem solid #65c4aa;
+		}
+		section{
+			background: #fff;
+			padding: 1.65rem 0.3rem 1rem 0.3rem; 
+		}
+		.character .name{
+			border-top: 0.08rem solid #f9f9f9;
+			position: relative;
+		}
+		.character .name img{
+			height: 0.6rem;
+		}
+		.character .name span{
+			padding-left: 0.25rem;
+			position: absolute;
+			top: .1rem;
+		}
+		.character .bg .images{
+			width: 6.84rem;
+			height: 6rem;
+		}
+		.character .bg ul{
+			position: relative;
+			padding-top: 0.1rem
+		}
+		.character .bg ul li{
+			display: inline-block;
+			width: 1.28rem;
+		}
+		.character .bg ul li img{
+			width: 0.36rem;
+		}
+		.character .bg ul li span{
+			color: #404040;
+			padding-left: 0.2rem;
+			position: absolute;
+			top: 0.08rem;
+		}
+		footer{
+			background: #fff;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		footer ul{
+			text-align: center;
+			font-size: 0;
+			height: 1rem;
+		}
+		footer ul li{
+			height: 100%;
+			font-size: 0.28rem;
+			position: relative;
+			text-align: center;
+			width: 25%;
+			display: inline-block;
+		}
+		footer ul li p{
+			position: absolute;
+			bottom: 0.06rem;
+			left: 0.73rem;
+			font-size: 0.18rem;
+			margin: 0;
+		}
+		footer ul li img{
+			margin-top: 0.2rem;
+			height: 0.45rem;
+		}
+		@media screen and (min-width: 769px){
+			body{
+				width: 640px;
+				margin: 0 auto;
+			}
+			nav{
+				width: 640px;
+			}
+			footer{
+				width: 640px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		    getRem(750,100)
+		};
+		window.onresize = function(){
+		    getRem(750,100)
+		};
+		function getRem(pwidth,prem){
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth/pwidth*prem + "px";
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<div class="searchk">
+			<input type="text" placeholder="全球优质供应商直供">
+			<img src="./images/search.png" id="bg1">
+			<img src="./images/message.png" id="bg2">
+			<ul>
+				<li>推荐</li>
+				<li>最新</li>
+				<li class="action">家饰</li>
+				<li>收纳</li>
+				<li>餐厨</li>
+				<li>家纺</li>
+			</ul>
+		</div>
+	</nav>
+	<section>
+		<div class="character">
+			<div class="name">
+				<img src="./images/character.png">
+				<span>安妮</span>
+			</div>
+			<div class="bg">
+				<img src="./images/tg9.png" class="images">
+				<ul>
+					<li>
+						<img src="./images/fabulous.png">
+						<span>20</span>
+					</li>
+					<li>
+						<img src="./images/collection.png">
+						<span>6</span>
+					</li>
+					<li>
+						<img src="./images/comment.png">
+						<span>1</span>
+					</li>
+				</ul>
+				<p>喜欢这个装修的风格,舒适,简单,颜色看着很舒服...</p>
+			</div>
+			<div class="name">
+				<img src="./images/character.png">
+				<span>安妮</span>
+			</div>
+			<div class="bg">
+				<img src="./images/tg9.png" class="images">
+				<ul>
+					<li>
+						<img src="./images/fabulous.png">
+						<span>20</span>
+					</li>
+					<li>
+						<img src="./images/collection.png">
+						<span>6</span>
+					</li>
+					<li>
+						<img src="./images/comment.png">
+						<span>1</span>
+					</li>
+				</ul>
+				<p>喜欢这个装修的风格,舒适,简单,颜色看着很舒服...</p>
+			</div>
+			<div class="name">
+				<img src="./images/character.png">
+				<span>安妮</span>
+			</div>
+			<div class="bg">
+				<img src="./images/tg9.png" class="images">
+				<ul>
+					<li>
+						<img src="./images/fabulous.png">
+						<span>20</span>
+					</li>
+					<li>
+						<img src="./images/collection.png">
+						<span>6</span>
+					</li>
+					<li>
+						<img src="./images/comment.png">
+						<span>1</span>
+					</li>
+				</ul>
+				<p>喜欢这个装修的风格,舒适,简单,颜色看着很舒服...</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<ul>
+			<li><img src="./images/stores.png"><p>商城</p></li>
+			<li><img src="./images/community.png"><p>社区</p></li>
+			<li><img src="./images/shopping.png"><p style="left: 0.65rem">购物车</p></li>
+			<li><img src="./images/my.png"><p>我的</p></li>
+		</ul>
+	</footer>
+	<script type="text/javascript">
+		var F = document.getElementsByTagName('footer')[0]
+		var oImg = F.getElementsByTagName('img')
+		var oP = F.getElementsByTagName('p')
+		oImg[1].src = './images/community1.png'
+		oP[1].style.color = '#65c4aa'
+	</script>
+</body>
+</html>

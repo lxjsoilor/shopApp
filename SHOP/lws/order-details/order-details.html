@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order-details</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_398616_nbh8yi5ri0wqxgvi.css">
+    <script>
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+    </script>
+    <style>
+    	*{margin:0;padding:0;}
+        html,body{}
+        .wrap{font-family: "微软雅黑" !important;background: #f9f9f9;position: relative;}
+        li{list-style: none;}
+        .iconfont{font-size: .26rem;}
+        .header{height:.88rem;line-height: .88rem; background: #fff;position: relative;}
+        .header h1{font-size: .32rem;text-align: center;color:#404040;}
+        .header h1 span img{height:.34rem;width:.2rem; position: absolute;left:.32rem;top:50%;transform:translateY(-50%); font-weight: 400;}
+        .tit{height:1.5rem;padding-right:3.67rem;padding-top:.7rem; font-size:.30rem;color:#fff; background: url(images/order1.png) no-repeat;background-size: 100% 100%;text-align: right;}
+        .recipients{font-size: .26rem;padding:.38rem;background: #fff;margin-top:-.14rem;}
+        .people span:nth-of-type(1){margin-left:.7rem;}
+        .people span:nth-of-type(2){float: right;}
+        .peoplename{font-weight: 700;}
+        .address{margin-top: .1rem;color:#8b8b8b;}
+        .address span{vertical-align: middle;}
+        .address i img{width:.2rem;height:.3rem; margin:0 .16rem;vertical-align: middle;}
+        .details{margin-top:.1rem; font-size: .26rem;background: #fff;}
+        .details h3{width:100%; height:.66rem;padding:0 .32rem;line-height: .66rem;border-bottom:.02rem solid #ececec;font-weight: 400;}
+        .details .details-box{padding:.2rem .32rem;position: relative;margin-bottom:.1rem;}
+        .details .details-box li{display: inline-block;}
+        .details-box li img{width:1.6rem;height:1.6rem;margin-right:.42rem; border:1px solid #f9f9f9;border-radius:0.06rem;box-shadow: 0 .01rem .03rem #999;}
+        .details-small p:nth-of-type(1){margin-bottom:.3rem;}
+        .details-small p:nth-of-type(2){margin-bottom:.26rem;color:#999999;}
+        .details-small p:nth-of-type(3){color:#fd888b;}
+        .num{position: absolute;right:.32rem;bottom:.2rem;}
+        .express{height:.92rem;padding:0 .32rem;font-size: .26rem;background: #fff;line-height:.92rem;}
+        .express span:nth-of-type(2){float: right;color:#fd888b;}
+        .sum{height:.92rem;padding:0 .32rem;margin-top: .03rem; font-size: .26rem;background: #fff;line-height:.92rem;}
+        .sum span{float: right;}
+        .sum span:nth-of-type(1){margin-left:.76rem;}
+        .sum span:nth-of-type(1) i{color:#fd888b;font-style: normal;}
+        .contact{margin-top: .2rem;padding:0 .32rem;font-size:.26rem;}
+        .contact p:nth-of-type(1){width:1.84rem;height:.58rem;margin-bottom:.24rem;line-height:.58rem;text-align: center;color:#fff;background:#65c4aa;border-radius:.08rem;}
+        .contact p{height:.5rem;line-height:.5rem;position: relative;}
+        .contact p i{margin-left:.1rem;font-style: normal;color:#999999;font-size: .2rem;}
+        /*.contact p span,.contact p i,.contact p button{position: absolute;bottom:0;}*/
+        .contact p button{display: inline-block; width:1rem;height:.5rem;text-align: center;color:#fff;background:#65c4aa;border-radius:.08rem;border:none;outline:none;float: right;vertical-align: bottom;font-size: .26rem;}
+        @media screen and (min-width:640px) {
+            body {
+                width:768px;
+                margin:0 auto;
+            }
+            .footer{
+                width:768px;
+            }
+            .hint{
+               width:768px; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+		<div class="header">
+            <h1><span><img src="images/goback.png" alt=""></span>订单详情</h1> 
+        </div>
+        <div class="section">
+            <div class="tit">
+                <p>卖家正努力派件</p>
+                <p>你的包裹正整装待发</p>
+            </div>
+            <div class="recipients">
+                <p class="people"><span class="peoplename">收货人：西瓜西瓜</span><span>收货号码：13265236932</span></p>
+                <p class="address"><i><img src="images/ads.png" alt=""></i><span>收货地址：深圳市龙华新区三联创业路龙华广场45号</span></p>
+            </div>
+            <div class="details">
+                <h3>商品信息：</h3>
+                <ul class="details-box">
+                    <li><img src="images/cart1.png" alt=""></li>
+                    <li class="details-small">
+                        <p>Line高白玉骨瓷马克杯</p>
+                        <p>颜色：哑光绿</p>
+                        <p>￥ 169</p>
+                    </li>
+                    <li class="num">x1</li>
+                </ul>
+                
+            </div>
+            <div class="express">
+                <span>快递</span>
+                <span>￥ 0.00</span>
+            </div>
+            <div class="sum">
+                <span>总计：<i>￥ 169</i></span>
+                <span>共一件商品</span>
+            </div>
+            <div class="contact">
+                <p>联系我们</p>
+                <p><span>订单编号：</span><i>945921662030110</i><button>复制</button></p>
+                <p><span>交易编号：</span><i>201704282100100169302569841256</i></p>
+                <p><span>交易时间：</span><i>2017-05-12 12：05：20</i></p>
+            </div>
+        </div>
+    </div>
+   
+    
+</body>
+
+</html>

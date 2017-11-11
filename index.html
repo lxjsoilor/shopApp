@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>shop</title><link href=./static/css/app.7b040b4b74e68186501aa0028e4b4aca.css rel=stylesheet></head><body><div id=app></div><script src=./static/js/mui.js></script><script>mui.init({
+            keyEventBind: {
+                backbutton: true
+            }
+        });
+        var _back = mui.back;
+        mui.back = function(){
+            _back();
+        }
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }</script><script type=text/javascript src=./static/js/manifest.e9fc0ceb30a55cb81ad1.js></script><script type=text/javascript src=./static/js/vendor.a2ac615aa2b38580d626.js></script><script type=text/javascript src=./static/js/app.c16839b31b4115a72e47.js></script></body></html>

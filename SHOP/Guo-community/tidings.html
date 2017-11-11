@@ -1,0 +1,167 @@
+<!--我的收藏-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的收藏</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<style type="text/css">
+		body,ul,p{
+			margin: 0;
+			padding: 0;
+			font-size: 0.32rem;
+		}
+		body{
+			background: #f9f9f9;
+		}
+		nav{
+			background: #fff;
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 0.9rem;
+			text-align: center;
+			line-height: 0.9rem;
+			border-bottom: 1px solid #f7f7f7;
+		}
+		nav span:nth-child(1){
+			font-size: 0.4rem;
+			padding-left: .3rem;
+			float: left;
+		}
+		nav span:nth-child(2){
+			padding-right: 0.3rem;
+		}
+		section{
+			margin: 1.1rem 0 0;
+		}
+		section .box{
+			position: relative;
+			margin-top: 0.2rem;
+			width: 100%;
+			height: 1.34rem;
+			background: #fff;
+		}
+		section .box img{
+			width: 0.89rem;
+			height: 0.89rem;
+			margin-top: 0.2rem;
+			margin-left: 0.26rem;
+		}
+		section .box .xb{
+			position: absolute;
+			top: 0.25rem;
+			width: 6rem;
+			display: inline-block;
+		}
+		section .box .xb span{
+			float: left;
+			font-size: 0.29rem;
+			padding-left: 0.3rem;
+		}
+		section .box .xb span:nth-child(3){
+			white-space:nowrap; 
+			overflow:hidden; 
+			text-overflow:ellipsis;
+			width: 4.44rem;
+			padding-top: 0.12rem;
+			font-size: 0.2rem;
+			color: #8c8c8c;
+		}
+		section .box .xb span:nth-child(4){
+			float: right;
+			margin-top: -0.3rem;
+		}
+		section .box .xb span:nth-child(4) img{
+			width: 0.2rem;
+			height: 0.34rem;
+		}
+		.lise:before{
+			position: absolute;
+		    width: 0.35rem;
+		    height: 0.35rem;
+		    border-radius: 50%;
+		    background: #e16064;
+		    color: #fff;
+		    right: 0.65rem;
+		    top: 0.55rem;
+		    text-align: center;
+		    line-height: 0.35rem;
+		    font-size: 0.2rem;
+		    content: '2';
+		    z-index: 1;
+		}
+		@media screen and (min-width: 769px){
+			body{
+				width: 640px;
+				margin: 0 auto;
+			}
+			nav{
+				width: 640px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		    getRem(750,100)
+		};
+		window.onresize = function(){
+		    getRem(750,100)
+		};
+		function getRem(pwidth,prem){
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth/pwidth*prem + "px";
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<span><</span>
+		<span>我的消息</span>
+	</nav>
+	<section>
+		<div class="box">
+			<img src="./images/客服1.png">
+			<div class="xb">
+				<span>在线客服</span><br>
+				<span>查看与客服的沟通记录</span>
+				<span><img src="./images/jtt.png"></span>
+			</div>
+		</div>
+		<div class="box lise">
+			<img src="./images/精选.png">
+			<div class="xb">
+				<span>活动精选</span><br>
+				<span>领取20元无门槛新人首单劵</span>
+				<span><img src="./images/jtt.png"></span>
+			</div>
+		</div>
+		<div class="box">
+			<img src="./images/点赞.png">
+			<div class="xb">
+				<span>点赞</span><br>
+				<span>最近人气不太行，都没人点赞</span>
+				<span><img src="./images/jtt.png"></span>
+			</div>
+		</div>
+		<div class="box">
+			<img src="./images/评论.png">
+			<div class="xb">
+				<span>评论</span><br>
+				<span>天啊，我是过气了么！都没人给我点赞... ...</span>
+				<span><img src="./images/jtt.png"></span>
+			</div>
+		</div>
+		<div class="box">
+			<img src="./images/系统.png">
+			<div class="xb">
+				<span>系统消息</span><br>
+				<span>店小二什么时候翻我的牌子</span>
+				<span><img src="./images/jtt.png"></span>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

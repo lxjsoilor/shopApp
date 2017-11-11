@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>recommend</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_398616_xhdnughdrd3ac3di.css">
+    <script>
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100);
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+
+        }
+    </script>
+    <style>
+    	*{margin:0;padding:0;}
+        html,body{font-family: "微软雅黑" !important;}
+        li{list-style: none;}
+        .header{position: fixed;height:.88rem; width:100%;top:0;font-size:.24rem;background: #fff;z-index: 99;}
+        .search{display: inline-block; height:.56rem;margin:.16rem .34rem;width:6.12rem;border-radius: .06rem;background: #ebebeb}
+        .search img{height:.26rem;width:.26rem;margin:0 .22rem; line-height:.56rem;}
+        .search input{height:100%;background: transparent;font-size: .26rem;}
+        .outline{outline: none;border:none;}
+        .msg{width: .42rem;height:.34rem;vertical-align: middle;}
+        .nav{padding:0 .34rem;margin-top:-1px; font-size: .26rem;color:#999999;background: #fff;}
+        .nav li{display: inline-block;height: .92rem;width:.75rem; margin-right: .65rem;line-height: .92rem;border-bottom:.08rem solid transparent;text-align: center;}
+        .nav li:nth-last-of-type(1){margin:0}
+        .active{color:#65c4aa;border-bottom:.08rem solid #65c4aa !important;}
+        .section{margin-top:1.8rem;margin-bottom: 1.4rem;}
+        .swiper-container{width:100%;height:3.8rem;}
+        .swiper-slide{position: relative;text-align: center;width:100%;}
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:0;}
+        .swiper-pagination-bullet-active{background: #fff;}
+        .title-desc{position: absolute;padding:0 .16rem; background:rgba(255,255,255,0.8);font-size: .26rem;top:50%;transform:translate(-50%,-50%);left:50%;}
+        .title-desc p{font-size: .23rem}
+        .title-desc p:nth-of-type(1){margin-bottom:.22rem;margin-top: .38rem;}
+        .title-desc p:nth-of-type(2){margin-bottom:.26rem;}
+        .title-desc p:nth-of-type(3){margin-bottom:.3rem;}
+        .desc{padding:0 .12rem; margin:.18rem 0;color:#6a6a6a;margin-top: -0.5rem;}
+        .desc img{width:.3rem;height:.3rem;margin-right:.1rem; border-radius:50%; vertical-align: middle;}
+        .desc span{display: inline-block; width:32.5%; font-size: .26rem;text-align: center;}
+        .desc span:nth-of-type(3){width:35%;}
+        .west-life,.new-goods,.time,.doyen,.like{margin-top:.56rem;padding:0 .32rem;}
+        .west-life:after,.price:after{display: block;content: "";clear: both;}
+        h2{margin-bottom: .46rem; font-size: .3rem;text-align: center;}
+        .left{float:left;}
+        .right{float:right;}
+        .west-life .west-box .left{width:3.36rem;height:3.36rem;}
+        .left img{height:100%;width:100%;}
+        .west-life .right{width:3.36rem;}
+        .right img{height:1.6rem;width:100%;}
+        .new-goods ul,.time ul{white-space: nowrap;overflow-x:auto;}
+        .new-goods ul li{display: inline-block;width:2.8rem;height:2.6rem;font-size: .26rem;text-align: center;}
+        .new-goods ul li img{width:100%;height:100%;margin-bottom:.28rem;}
+        .new-goods ul li p{margin-bottom:.24rem;width:2.16rem;padding:0 .32rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+        .new-goods ul li span{color:#fd888b;}
+        .new-goods .more{font-size: .26rem;color:#6a6a6a;text-align: center;}
+        .time h2{margin-bottom:.32rem;}
+        .time li{display: inline-block;}
+        .time img{width:3.3rem;height:3.4rem;}
+        .time .time1{margin-bottom:.32rem; font-size: .26rem;color:#6a6a6a;text-align: center;}
+        .time .time1 img{width:.3rem;height:.3rem;vertical-align: middle;margin-right:.2rem;}
+        .time .right{font-size: 0.26rem;text-align: center;float:left;margin:.86rem .32rem;}
+        .time .right p:nth-of-type(1){margin-bottom:.38rem;width:2rem;padding:0 .15rem; overflow:hidden; text-overflow:ellipsis; }
+        .time .right p:nth-of-type(2){margin-bottom:.2rem; }
+        .time .right .btn{display: inline-block; width:2.3rem;height:.6rem;border:1px solid #000;line-height:.6rem;border-radius:.08rem; }
+        .time .right .btn>img{width:.34rem;height:.3rem;margin-right:.16rem;vertical-align: middle;}
+        .time .right .btn>em{vertical-align: middle;font-style: normal;}
+        .unline{color:#fd888b;font-size: .3rem}
+        .line{font-size: .16rem;text-decoration:line-through;color:#6a6a6a;}
+        .cart{margin-right:.18rem;}
+        .doyen{font-size: .24rem;}
+        .doyen h5{color:#65c4aa;}
+        .doyen h5 img{width:.54rem;height:.54rem;margin-right: .22rem; border-radius:50%;vertical-align: middle;}
+        .doyen .show{width:100%;border-radius: .08rem;margin:.24rem 0;}
+        .doyen .small span{margin-right: .6rem;}
+        .doyen .small span img{margin-right: .12rem;vertical-align: middle}
+        .doyen .small span em{vertical-align: middle;font-style:normal;}
+        .doyen .small span:nth-of-type(1) img{width:.33rem;height:.36rem;}
+        .doyen .small span:nth-of-type(2) img{width:.38rem;height:.34rem;}
+        .doyen .small span:nth-of-type(3) img{width:.38rem;height:.34rem;}
+        .doyen .font{margin-top:.24rem;font-size: .26rem;color:#6e6e6e;height:1.1rem;overflow:hidden; text-overflow:ellipsis;display: -webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical; }
+        .like{font-size: .26rem;}
+        .like li{margin-bottom:.66rem;}
+        .like li img{width:100%;}
+        .like li h3{margin:.34rem 0;}
+        .like-desc{color:#6e6e6e;overflow:hidden; text-overflow:ellipsis;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+        .price{height:.82rem;position: relative;}
+        .price span:nth-of-type(1){position: absolute;bottom:0; color:#fd888b;vertical-align: bottom;}
+        .price span:nth-of-type(2){position: absolute;bottom:0; right:0;display:inline-block;height:.82rem;width:1.66rem;border:1px solid #000;border-radius:.08rem;line-height:.82rem;text-align: center;vertical-align: bottom;}
+        .footer{position: fixed;bottom:0;width:100%;background: #fff;z-index:1;}
+        .footer ul li{float: left;width:25%;text-align: center;font-size:.26rem;margin:.1rem 0;}
+        .footer ul li img{width:.6rem;height:.6rem;}
+        .active-fot{color:#65c4aa;}
+        @media screen and (min-width:740px) {
+            body {
+                width:768px;
+                margin:0 auto;
+            }
+            .footer{
+                width:768px;
+            }
+            .hint{
+               width:768px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+		<div class="header">
+			<div class="search"><img src="images/search.png" alt="" class="msg"><input type="text" name="" class="outline" placeholder="全球优质供应商直供"></div><img src="images/msg.png" alt="" class="msg">
+            <div class="nav">
+                <li class="active">推荐</li>
+                <li>家饰</li>
+                <li>收纳</li>
+                <li>餐厨</li>
+                <li>家纺</li>
+            </div>
+		</div>
+        <div class="section">
+            <div class="title">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background: url(images/recommend1.jpg);background-size:100% 100%;">
+                            <div class="title-desc">
+                                <p><b>舒适家居，柔软沙发</b></p>
+                                <p>5.20中午12点/爱购秒杀</p>
+                                <p>RMB：199.9</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background: url(images/recommend2.jpg);background-size:100% 100%;">
+                            <div class="title-desc">
+                                <p><b>舒适家居，柔软沙发</b></p>
+                                <p>5.20中午12点/爱购限时</p>
+                                <p>RMB：199.9</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background: url(images/recommend3.jpg);background-size:100% 100%;">
+                            <div class="title-desc">
+                                <p><b>舒适家居，柔软沙发</b></p>
+                                <p>5.20中午12点/爱购限时杀</p>
+                                <p>RMB：199.9</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="desc">
+                <span><img src="images/sure.png" alt="">欧美质量标准</span><span><img src="images/sure.png" alt="">30天无忧退货</span><span><img src="images/sure.png" alt="">24小时快速发货</span>
+            </div>
+            <div class="west-life">
+                <h2>欧美生活直通车</h2>
+                <div class="west-box">
+                    <div class="left">
+                        <img src="images/life1.png" alt="">
+                    </div>
+                    <div class="right">
+                        <img src="images/life2.png" alt="">
+                        <img src="images/life3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="new-goods">
+                <h2>新品上市</h2>
+                <ul>
+                    <li>
+                        <img src="images/new1.png" alt="">
+                        <p>长绒棉毯舒适系列</p>
+                        <span>￥9</span>
+                    </li>
+                    <li>
+                        <img src="images/new2.png" alt="">
+                        <p>长绒棉毯舒适系列</p>
+                        <span>￥19</span>
+                    </li>
+                    <li>
+                        <img src="images/new1.png" alt="">
+                        <p>长绒棉毯舒适系列</p>
+                        <span>￥9</span>
+                    </li>
+                    <li>
+                        <img src="images/new2.png" alt="">
+                        <p>长绒棉毯舒适系列</p>
+                        <span>￥19</span>
+                    </li>
+                </ul>
+                <p class="more">查看所有新品 ></p>
+            </div>
+            <div class="time">
+                <h2>周二周五.限时秒杀</h2>
+                <p class="time1"><img src="images/time.png" alt="">05月23日 周二 11:00-11:30</p>
+                <ul>
+                    <li>
+                        <img src="images/time1.png" alt="" class="left">
+                        <div class="right">
+                            <p>纯色卡通窗帘大范甘迪个会飞的</p>
+                            <p><span class="unline">￥69</span><span class="line">￥109</span></p>
+                            <span class="btn"><img src="images/cart.png" alt=""><em>即将开始</em></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/time1.png" alt="" class="left">
+                        <div class="right">
+                            <p>纯色卡通窗帘</p>
+                            <p><span class="unline">￥69</span><span class="line">￥109</span></p>
+                            <span class="btn"><img src="images/cart.png" alt=""><em>即将开始</em></span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/time1.png" alt="" class="left">
+                        <div class="right">
+                            <p>纯色卡通窗帘</p>
+                            <p><span class="unline">￥69</span><span class="line">￥109</span></p>
+                            <span class="btn"><img src="images/cart.png" alt=""><em>即将开始</em></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="doyen">
+                <h2>达人晒单</h2>
+                <h5><img src="images/doyen.png" alt=""><span>琳达</span></h5>
+                <img src="images/doyenimg1.png" alt="" class="show">
+                <p class="small">
+                    <span><img src="images/pointer.png" alt=""><em>20</em></span>
+                    <span><img src="images/hearth.png" alt=""><em>6</em></span>
+                    <span><img src="images/xin.png" alt=""><em>1</em></span>
+                </p>
+                <p class="font">无需滤镜的小树枝，虽然稍微有点蔫,和折纸花瓶是极配。绿色很有意思，放在工业设计上经常觉得突兀，可是放在自然里又是艳压群芳。</p>
+            </div>
+            <div class="like">
+                <h2>猜你喜欢</h2>
+                <li>
+                    <img src="images/like1.png" alt="">
+                    <h3>创意现代简约台灯</h3>
+                    <p class="like-desc">创意现代简约个性玻璃书桌灯，遥控调光台灯，陪伴书桌阅读时光的美好瞬间。</p>
+                    <p class="price"><span>￥369</span><span>购买</span></p>
+                </li>
+                <li>
+                    <img src="images/like2.png" alt="">
+                    <h3>沃之沃塑料收纳箱</h3>
+                    <p class="like-desc">衣服整理箱置物箱，家居收纳储物，带四个轮子，品牌力量，用心传承，品质非凡。</p>
+                    <p class="price"><span>￥69</span><span>购买</span></p>
+                </li>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="nav-foot">
+                <li>
+                    <img src="images/icon/store-active.png" alt=""><br>
+                    <span class="active-fot">商城</span>
+                </li>
+                <li>
+                    <img src="images/icon/community.png" alt=""><br>
+                    <span>社区</span>
+                </li>
+                <li>
+                    <img src="images/icon/cart.png" alt=""><br>
+                    <span>购物车</span>
+                </li>
+                <li>
+                    <img src="images/icon/user.png" alt=""><br>
+                    <span>我的</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+        loop : true,
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!--弹框 支付详情-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>弹框</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-size: 0.34rem;
+			color: #404040;
+		}
+		body{
+			overflow: hidden;
+		}
+		.zf{
+			width: 100%;
+			height: 2000px;
+			background: rgba(0,0,0,0.3);
+		}
+		.zf .botn{
+			width: 100%;
+			height: 6.94rem;
+			background: #fff;
+			position: fixed;
+			bottom: 0;
+		}
+		.zf .botn .tit{
+			width: 100%;
+			height: 1.3rem;
+			border-bottom: .04rem solid #ececec;
+			text-align: center;
+			line-height: 1.3rem;
+		}
+		.zf .botn .tit span:nth-child(1){
+			float: left;
+			padding-left: 0.72rem;
+		}
+		.zf .botn .tit span:nth-child(2){
+			padding-right: 0.72rem;
+		}
+		.zf .botn .messag{
+			width: 100%;
+			height: 1.24rem;
+			border-bottom: .04rem solid #ececec;
+			text-align: center;
+			line-height: 1.24rem;
+		}
+		.zf .botn .messag span:nth-child(1){
+			float: left;
+			padding-left: 0.72rem;
+		}
+		.zf .botn .messag span:nth-child(2){
+			float: right;
+			padding-right: 0.72rem;
+		}
+		.zf .botn .btn{
+			width: 100%;
+			height: 1.7rem;
+		}
+		.zf .botn .btn .bt{
+			width: 5.8rem;
+			height: 1.1rem;
+			background: #65c4aa;
+			border-radius: 0.08rem;
+			text-align: center;
+			line-height: 1.1rem;
+			color: #fff;
+			font-size: 0.32rem;
+			margin: 0.32rem auto;
+		}
+		@media screen and (min-width: 769px){
+			body{
+				width: 640px;
+				margin: 0 auto;
+			}
+			.zf .botn{
+				width: 640px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		    getRem(750,100)
+		};
+		window.onresize = function(){
+		    getRem(750,100)
+		};
+		function getRem(pwidth,prem){
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth/pwidth*prem + "px";
+		}
+	</script>
+</head>
+<body>
+	<div class="zf">
+		<div class="botn">
+			<div class="tit">
+				<span>X</span>
+				<span>支付详情</span>
+			</div>
+			<div class="messag">
+				<span>支付账号：</span>
+				<span>132****0968</span>
+			</div>
+			<div class="messag">
+				<span>支付方式：</span>
+				<span>余额 ></span>
+			</div>
+			<div class="messag">
+				<span>支付金额：</span>
+				<span style="color: #fe898c;">￥169</span>
+			</div>
+			<div class="btn">
+				<div class="bt">确定支付</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

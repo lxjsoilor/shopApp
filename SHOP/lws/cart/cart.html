@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cart</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_398616_cpnh7sbrd0ftj4i.css">
+    <script>
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+    </script>
+    <style>
+    	*{margin:0;padding:0;}
+        body{background: #f9f9f9;position: relative;}
+        html,body{font-family: "微软雅黑" !important;}
+        li{list-style: none;}
+        .iconfont{font-size: .26rem;}
+        .header{padding-top:.2rem;background: #fff;}
+        .header h1{font-size: .32rem;text-align: center;position: relative;}
+        .header h1 img{width:.36rem;vertical-align: middle;position: absolute;right:.32rem;}
+        .desc{padding:0 .12rem; margin:.03rem 0;color:#6a6a6a;margin-top: -0.5rem;}
+        .desc img{width:.3rem;height:.3rem;margin-right:.1rem; border-radius:50%; vertical-align: middle;}
+        .desc span{display: inline-block; width:32.5%; font-size: .26rem;text-align: center;}
+        .desc span:nth-of-type(3){width:35%;}
+        .cart-box{height:2rem; position: relative;background: #fff;padding:.4rem .34rem;margin-bottom: .28rem;}
+        .cart-box li{display: inline-block;font-size: .26rem}
+        .cart-box .check{display: inline-block;width:.36rem;height:.36rem;border:.03rem solid #8b8b8b;border-radius: 50%;position:absolute;top:50%;transform: translateY(-50%);}
+        .cart-box li img{width:1.6rem;height:1.6rem;margin:0 .18rem; border:1px solid #f9f9f9;border-radius:0.06rem;position:absolute;top:50%;transform: translateY(-50%);left:.8rem;}
+        .cart-box .cart-detail{position: absolute;left:3rem;}
+        .cart-detail p{margin-bottom:.32rem;}
+        .cart-detail .num{display: inline-block; border-radius:.06rem;border:.02rem solid #8b8b8b;}
+        .cart-detail .num span{display: inline-block;width:.62rem;height:.62rem;line-height: .62rem;text-align: center;}
+        .cart-detail .num span:nth-of-type(2){border-left:.02rem solid #8b8b8b;border-right:.02rem solid #8b8b8b;}
+        .cart-box .right{width:.34rem;height:.4rem;z-index: 99;position: absolute;right:.34rem;top:.4rem;}
+        
+        .cart-box .price{position: absolute;bottom:.4rem;right:.34rem;color:#fd888b;}
+        .count{position:fixed;padding:.23rem .32rem; bottom:1.16rem;font-size:.26rem;background: #fff;width:100%;height:.68rem;}
+        .count .check{margin-right:.2rem;display: inline-block;width:.36rem;height:.36rem;border:.03rem solid #8b8b8b;border-radius: 50%;vertical-align: middle;margin-top: .2rem;}
+        .count .all{vertical-align: middle;margin-top: .2rem;display: inline-block;}
+        .count .sum{vertical-align: middle;margin-top: .2rem;display: inline-block;}
+        .count .sum span{color:#fd888b;}
+        .count button{display: inline-block;width:1.6rem;height:.8rem;border-radius: .08rem;color:white;background:#65c4aa; float: right;margin-right:.64rem;vertical-align: middle;border:none;outline: none;font-size: .26rem;}
+        .footer{position: fixed;bottom:0;width:100%;background: #fff;}
+        .footer ul li{float: left;width:25%;text-align: center;font-size:.26rem;margin:.1rem 0;}
+        .footer ul li img{width:.6rem;height:.6rem;}
+        .active-fot{color:#65c4aa;}
+        
+        @media screen and (min-width:768px) {
+            body {
+                width:768px;
+                margin:0 auto;
+            }
+            .footer{
+                width:768px;
+            }
+            .hint{
+               width:768px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+		<div class="header">
+            <h1>我的购物车<img src="images/title.png" alt=""></h1>
+            <div class="desc">
+                <span><img src="images/sure.png" alt="">欧美质量标准</span><span><img src="images/sure.png" alt="">30天无忧退货</span><span><img src="images/sure.png" alt="">24小时快速发货</span>
+            </div>
+        </div>
+        <ul class="cart-box">
+            <li><i class="check"></i></li>
+            <li><img src="images/cart1.png" alt=""></li>
+            <li class="cart-detail">
+                <p>Line高白玉骨瓷马克杯</p>
+                <p>颜色：哑光绿</p>
+                <p class="num"><span>-</span><span>1</span><span>+</span></p>
+            </li>
+            <img src="images/ls.png" alt="" class="right">
+            <li class="price"><p>￥ 169</p></li>   
+        </ul>
+        <ul class="cart-box">
+            <li><i class="check"></i></li>
+            <li><img src="images/cart2.png" alt=""></li>
+            <li class="cart-detail">
+                <p>LED小台灯</p>
+                <p>颜色：米白色</p>
+                <p class="num"><span>-</span><span>1</span><span>+</span></p>
+            </li>
+            <img src="images/ls.png" alt="" class="right">
+            <li class="price"><p>￥ 69</p></li>   
+        </ul>
+        <div class="count">
+            <i class="check"></i><span class="all">全选</span>
+            <span class="sum">总计 （不含运费）：<span>￥ 0</span></span>
+            <button>立即下单</button>
+        </div>
+        <div class="footer">
+            <ul class="nav-foot">
+                <li>
+                    <img src="images/icon/store.png" alt=""><br>
+                    <span>商城</span>
+                </li>
+                <li>
+                    <img src="images/icon/community.png" alt=""><br>
+                    <span>社区</span>
+                </li>
+                <li>
+                    <img src="images/icon/cart-active.png" alt=""><br>
+                    <span class="active-fot">购物车</span>
+                </li>
+                <li>
+                    <img src="images/icon/user.png" alt=""><br>
+                    <span>我的</span>
+                </li>
+            </ul>
+        </div> 
+    </div>
+    
+    
+</body>
+
+</html>

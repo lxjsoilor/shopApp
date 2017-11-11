@@ -1,0 +1,376 @@
+<!-- 他的资料 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Information</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-size: 0.36rem;
+			font-family: '微软雅黑';
+		}
+		body{
+			background: #f9f9f9;
+			overflow-x: hidden;
+		}
+		.bg{
+			height: 4.2rem;
+			position: relative;
+		}
+		.bg img{
+			width: 100%;
+			height: 4.2rem;
+		}
+		.bg .ghost{
+			color: #fff;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			height: 4.2rem;
+			width: 100%;
+			background: rgba(0,0,0,0.4);
+		}
+		.bg .ghost .title{
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+			height: 0.9rem;
+		}
+		.bg .ghost .title span:nth-child(1){
+			padding-left: 0.2rem;
+			margin-top: 0.2rem;
+			float: left;
+		}
+		.bg .ghost .title span:nth-child(1) img{
+			width: 0.48rem;
+			height: 0.48rem;
+		}
+		.bg .ghost .title span:nth-child(2){
+			line-height: 0.9rem;
+			padding-right: 0.5rem
+		}
+		.bg .ghost .datum{
+			margin-top: 0.75rem;
+			width: 100%;
+			height: 3.45rem;
+			position: relative;
+		}
+		.bg .ghost .datum span{
+			text-align: center;
+			line-height: 3.8rem;
+			font-size: 0.3rem;
+		}
+		.bg .ghost .datum p{
+			position: absolute;
+			left: 3.02rem;
+			margin:0;
+			margin-top: 0.1rem;
+			width: 1.42rem;
+			height: 1.42rem;
+			border: 0.03rem solid transparent;
+			border-radius:50%;
+			border-left:0.03rem solid #65c4aa;
+			border-right:0.03rem solid #65c4aa;
+			border-bottom:0.03rem solid #65c4aa;
+			transform:rotate(-45deg);
+		}
+		.bg .ghost .datum p img{
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-top: 0.01rem;
+			transform:rotate(45deg);
+		}
+		.bg .ghost .message{
+			position: relative;
+			bottom: 1.25rem;
+			left: 2.65rem;
+			width: 2.3rem;
+			height: 0.75rem;
+		}
+		.bg .ghost .message span{
+			font-size: 0.25rem;
+		}
+		.bg .ghost .message span:nth-child(1){
+			color: #65c4aa
+		}
+		.bg .ghost .message span:nth-child(2){
+			padding-right: 0.1rem;
+			border-right: 1px solid #fff;
+		}
+		.bg .ghost .message span:nth-child(3){
+			color: #fd888b
+		}
+		section{
+			margin: 0 0 1rem
+		}
+		section .me{
+			width: 100%;
+			height: 0.72rem;
+			line-height: 0.72rem;
+			background: #fff;
+			border-bottom: 2px solid #e7e7e7;
+		}
+		section .me span{
+			padding: 0.16rem 0 0 0.32rem;
+			font-size: 0.24rem;
+		}
+		section .me span:nth-child(2){
+			float: right;
+			padding: 0 0.32rem 0 0;
+			font-size: 0.24rem;
+			color: #ababab;
+		}
+		section ul{
+			background: #fff;
+			font-size: 0;
+			width: 7.13rem;
+			padding: 0 0.19rem;
+			height: 1.24rem;
+			border-bottom: 2px solid #e7e7e7;
+		}
+		section ul li{
+			width: 1.78rem;
+			height: 100%;
+			display: inline-block;
+			text-align: center;
+			position: relative;
+		}
+		.lis:before{
+			position: absolute;
+		    width: 0.25rem;
+		    height: 0.25rem;
+		    border-radius: 50%;
+		    background: #e16064;
+		    text-align: center;
+		    line-height: 0.25rem;
+		    color: #fff;
+		    right: 0.55rem;
+		    top: 0.1rem;
+		    font-size: 0.2rem;
+		    content: '1';
+		    z-index: 1;
+		}
+		.lise:before{
+			position: absolute;
+		    width: 0.25rem;
+		    height: 0.25rem;
+		    border-radius: 50%;
+		    background: #e16064;
+		    text-align: center;
+		    line-height: 0.25rem;
+		    color: #fff;
+		    right: 0.55rem;
+		    top: 0.1rem;
+		    font-size: 0.2rem;
+		    content: '2';
+		    z-index: 1;
+		}
+		section ul li img{
+			padding-top: 0.16rem;
+			width: 0.5rem;
+			height: 0.5rem;
+		}
+		section ul li p{
+			position: absolute;
+			bottom: 0.28rem;
+			left: 0.48rem;
+			font-size: 0.26rem;
+		}
+		section .xbox{
+			width: 100%;
+			height: 1.04rem;
+			border-bottom: 1px solid #eaeaea;
+			background: #fff;
+			line-height: 1.04rem;
+		}
+		section .xbox img{
+			margin-top: 0.2rem;
+			margin-left: 0.25rem;
+			float: left;
+			width: 0.62rem;
+			height: 0.6rem;
+		}
+		section .xbox:nth-child(4) img{
+			margin-top: 0.3rem;
+			margin-left: 0.3rem;
+			margin-right: 0.13rem;
+			width: 0.45rem;
+			height: 0.45rem;
+		}
+		section .xbox:nth-child(7) span:nth-child(4){
+			float: right;
+			padding-right: 0.2rem;
+			color: #feabae;
+		}
+		section .xbox span{
+			float: left;
+			font-size: 0.26rem;
+		}
+		section .xbox span:nth-child(3){
+			color: #ababab;
+			font-size: 0.3rem;
+			float: right;
+			margin-right: 0.3rem;
+		}
+		footer{
+			background: #fff;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		footer ul{
+			text-align: center;
+			font-size: 0;
+			height: 1rem;
+		}
+		footer ul li{
+			height: 100%;
+			font-size: 0.28rem;
+			position: relative;
+			text-align: center;
+			width: 25%;
+			display: inline-block;
+		}
+		footer ul li p{
+			position: absolute;
+			bottom: 0.06rem;
+			left: 0.75rem;
+			font-size: 0.18rem;
+			margin: 0;
+		}
+		footer ul li img{
+			margin-top: 0.2rem;
+			height: 0.45rem;
+		}
+		@media screen and (min-width: 769px){
+			body{
+				width: 640px;
+				margin: 0 auto;
+			}
+			.bg .ghost .title{
+				width: 640px;
+			}
+			footer{
+				width: 640px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		    getRem(750,100)
+		};
+		window.onresize = function(){
+		    getRem(750,100)
+		};
+		function getRem(pwidth,prem){
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth/pwidth*prem + "px";
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<div class="bg">
+			<img src="./images/bg.jpg">
+			<div class="ghost">
+				<div class="title" id="title">
+					<span><img src="./images/install.png"></span>
+					<span>我的</span>
+				</div>
+				<div class="datum">
+					<p>
+						<img src="./images/character2.png">
+					</p>
+					<span>西瓜西瓜</span>
+				</div>
+				<div class="message">
+					<span>22</span>
+					<span>关注</span>
+					<span>20</span>
+					<span>粉丝</span>
+					<span>爱生活，爱自己</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<section>
+		<div class="me">
+			<span>我的订单</span>
+			<span>查看全部订单 ></span>
+		</div>
+		<ul>
+			<li>
+				<img src="./images/待付款.png">
+				<p>待付款</p>
+			</li>
+			<li class="lis">
+				<img src="./images/待发货.png">
+				<p>待发货</p>
+			</li>
+			<li class="lise">
+				<img src="./images/已发货.png">
+				<p>已发货</p>
+			</li>
+			<li>
+				<img src="./images/已完成.png">
+				<p>已完成</p>
+			</li>
+		</ul>
+		<div class="xbox">
+			<img src="./images/售后.png">
+			<span>退货/售后</span>
+			<span>></span>
+		</div>
+		<div class="xbox">
+			<img src="./images/客服.png">
+			<span>爱购服务</span>
+			<span>></span>
+		</div>
+		<div class="xbox">
+			<img src="./images/积分.png">
+			<span>我的积分</span>
+			<span>></span>
+		</div>
+		<div class="xbox">
+			<img src="./images/我的优惠券.png">
+			<span>我的优惠券</span>
+			<span>></span>
+		</div>
+		<div class="xbox">
+			<img src="./images/分享优惠券.png">
+			<span>分享赢优惠券</span>
+			<span>></span>
+			<span>立减30元</span>
+		</div>
+		<div class="xbox">
+			<img src="./images/收藏.png">
+			<span>我的收藏</span>
+			<span>></span>
+		</div>
+		<div class="xbox">
+			<img src="./images/发帖.png">
+			<span>我的发帖</span>
+			<span>></span>
+		</div>
+	</section>
+	<footer>
+		<ul>
+			<li><img src="./images/stores.png"><p>商城</p></li>
+			<li><img src="./images/community.png"><p>社区</p></li>
+			<li><img src="./images/shopping.png"><p style="left: 0.7rem">购物车</p></li>
+			<li><img src="./images/my.png"><p>我的</p></li>
+		</ul>
+	</footer>
+	<script type="text/javascript">
+		var F = document.getElementsByTagName('footer')[0]
+		var oImg = F.getElementsByTagName('img')
+		var oP = F.getElementsByTagName('p')
+		oImg[3].src = './images/my1.png'
+		oP[3].style.color = '#65c4aa'
+	</script>
+</body>
+</html>

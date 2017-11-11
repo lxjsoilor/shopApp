@@ -1,0 +1,241 @@
+<!--我的积分3-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我的积分</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: '微软雅黑';
+			font-size: 0.36rem;
+		}
+		nav{
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 0.9rem;
+			text-align: center;
+			line-height: 0.90rem;
+			box-shadow: 0 0 0.05rem #a09e9e;
+			background: #fff;
+		}
+		nav span:nth-child(1){
+			float: left;
+			padding-left: 0.3rem;
+		}
+		nav span:nth-child(2){
+			padding-right: 0.5rem;
+		}
+		.tit{
+			position: relative;
+			width: 100%;
+			height: 4.2rem;
+		}
+		.tit img{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.tit .integral{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			background: rgba(0,0,0,.5);
+		}
+		.tit .integral p{
+			font-size: 0.5rem;
+			color: #fff;
+			margin: 1.7rem 0 -0.2rem;
+		}
+		.tit .integral p:nth-child(2){
+			margin: 0;
+			font-size: 0.35rem;
+		}
+		ul{
+			width: 6.88rem;
+			height: 0.88rem;
+			background: #fff;
+			font-size: 0;
+			padding: 0 0.32rem;
+		}
+		ul li{
+			height: 0.84rem;
+			width: 2.29rem;
+			text-align: center;
+			line-height: 0.88rem;
+			font-size: 0.28rem;
+			display: inline-block;
+		}
+		.action{
+			color: #65c4aa;
+			border-bottom: 0.04rem solid #65c4aa;
+		}
+		section{
+			margin: 5.98rem 0 0;
+		}
+		section .nr{
+			width: 100%;
+			height: 7.34rem;
+			background: #f7f7f7;
+			text-align: center;
+			line-height: 7.34rem;
+		}
+		section .nr p{
+			font-size: 0.32rem;
+			color: #65c4aa;
+		}
+		section .obtain{
+			width: 100%;
+			height: 0.78rem;
+			border-bottom: 0.04rem solid #e3e3e3;
+			line-height: 0.78rem;
+		}
+		section .obtain span{
+			font-size: 0.28rem;
+			padding-left: 0.66rem;
+		}
+		section .obtain span:nth-child(2){
+			color: #8b8b8b;
+			font-size: 0.23rem;
+		}
+		section .fl{
+			position: relative;
+			width: 100%;
+			height: 1.8rem;
+			border-bottom: 0.04rem solid #e3e3e3;
+		}
+		section .fl:nth-child(3){
+			height: 2.4rem;
+		}
+		section .fl:nth-child(4),section .fl:nth-child(5){
+			height: 2.2rem;
+		}
+		section .fl:nth-child(6){
+			height: 3rem;
+		}
+		section .fl img{
+			position: absolute;
+			margin: 0.3rem 0.36rem 0 0.62rem;
+			width: 0.48rem;
+			height: 0.48rem;
+		}
+		section .fl .sm{
+			position: absolute;
+			top: 0.3rem;
+			left: 1.4rem;
+			width: 4.8rem;
+			display: inline-block;
+		}
+		section .fl .sm span{
+			line-height: 0;
+			font-size: 0.3rem;
+		}
+		section .fl .sm span:nth-child(2){
+			padding-left: .3rem;
+			color: #65c4aa;
+		}
+		section .fl .sm span:nth-child(4){
+			color: #7e7e7e;
+			font-size: 0.24rem;
+		}
+		section .fl:nth-child(4) .sm span:nth-child(2),section .fl:nth-child(5) .sm span:nth-child(2),section .fl:nth-child(6) .sm span:nth-child(2){
+			padding-left: .9rem;
+		}
+		@media screen and (min-width: 769px){
+			body{
+				width: 640px;
+				margin: 0 auto;
+			}
+			nav{
+				width: 640px;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+		    getRem(750,100)
+		};
+		window.onresize = function(){
+		    getRem(750,100)
+		};
+		function getRem(pwidth,prem){
+		    var html = document.getElementsByTagName("html")[0];
+		    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+		    html.style.fontSize = oWidth/pwidth*prem + "px";
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<span><</span>
+		<span>我的积分</span>
+		<div class="tit">
+			<img src="./images/bg1.jpg">
+			<div class="integral">
+				<p>6</p>
+				<p>我的积分</p>
+			</div>
+		</div>
+		<ul>
+			<li>兑换优惠券</li>
+			<li>我的兑换记录</li>
+			<li class="action">获取最高积分</li>
+		</ul>
+	</nav>
+	<section>
+		<!-- <div class="nr">
+			<p>你不兑换,哪来的记录！</p>
+		</div> -->
+		<div class="obtain">
+			<span>获取更高积分</span>
+			<span>一分耕耘，一分收获</span>
+		</div>
+		<div class="fl">
+			<img src="./images/tb.png">
+			<div class="sm">
+				<span>连续登陆</span>
+				<span>+3</span><br>
+				<span>每天打开爱购app，奖励3积分。</span>
+			</div>
+		</div>
+		<div class="fl">
+			<img src="./images/tb1.png">
+			<div class="sm">
+				<span>社区发帖</span>
+				<span>+10</span><br>
+				<span>在社区发布一条帖子，奖励10积分;<br>发布帖子被社区推荐，额外奖励20积分;<br>限每天发布的前两条帖子。</span>
+			</div>
+		</div>
+		<div class="fl">
+			<img src="./images/tb2.png">
+			<div class="sm">
+				<span>分享</span>
+				<span>+5</span><br>
+				<span>将社区帖子分享一次微博，微信好友或朋友圈，奖励5积分；限每天的前三次分享。</span>
+			</div>
+		</div>
+		<div class="fl">
+			<img src="./images/tb3.png">
+			<div class="sm">
+				<span>收藏</span>
+				<span>+1</span><br>
+				<span>收藏一次社区帖子，话题文章，或爱购单品，奖励1积分；限每天的前三次收藏。</span>
+			</div>
+		</div>
+		<div class="fl">
+			<img src="./images/tb4.png">
+			<div class="sm">
+				<span>评论</span>
+				<span>+2</span><br>
+				<span>参与一次话题文章的评论或回复社区帖子，奖励2积分；限每天的前三次评论。</span>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_398616_494tmfij60tfbt9.css">
+    <script>
+        window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+    </script>
+    <style>
+    	*{margin:0;padding:0;}
+        html,body{font-family: "微软雅黑" !important;}
+        li{list-style: none;}
+        .header{position: fixed;height:.88rem; width:100%;top:0;font-size:.24rem;background: #fff;z-index: 99;}
+        .search{display: inline-block; height:.56rem;margin:.16rem .34rem;width:6.12rem;border-radius: .06rem;background: #ebebeb}
+        .search img{height:.26rem;width:.26rem;margin:0 .22rem; line-height:.56rem;}
+        .search input{height:100%;background: transparent;font-size: .26rem;}
+        .outline{outline: none;border:none;}
+        .msg{width: .42rem;height:.34rem;vertical-align: middle;}
+        .nav{padding:0 .34rem;margin-top:-1px; font-size: .26rem;color:#999999;background: #fff;}
+        .nav li{display: inline-block;height: .92rem;width:.75rem; margin-right: .65rem;line-height: .92rem;border-bottom:.08rem solid transparent;text-align: center;}
+        .nav li:nth-last-of-type(1){margin:0}
+        .active{color:#65c4aa;border-bottom:.08rem solid #65c4aa !important;}
+        .section{margin-top:1.8rem;}
+        .swiper-container{width:100%;height:3.8rem;}
+        .swiper-slide{position: relative;text-align: center;width:100%;}
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:0;}
+        .swiper-pagination-bullet-active{background: #fff;}
+        .title-desc{position: absolute;height:.96rem;padding:0 .16rem; background:rgba(255,255,255,0.8);font-size: .26rem;top:50%;transform:translate(-50%,-50%);left:50%;line-height: .96rem;}
+        .goods{text-align: center;}
+        .goods li p{width:2.8rem;padding:0 .32rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+        .goods li{float:left;margin:.15rem;font-size: .26rem;}
+        .goods li:nth-last-of-type(1){margin-bottom:1.2rem}
+        .goods li img{width:3.44rem;height:3.44rem;border-radius: .08rem;}
+        .goods li span{color:#fd888b;}
+        .footer{position: fixed;bottom:0;width:100%;background: #fff;z-index:1;}
+        .footer ul li{float: left;width:25%;text-align: center;font-size:.26rem;margin:.1rem 0;}
+        .footer ul li img{width:.6rem;height:.6rem;}
+        .active-fot{color:#65c4aa;}
+        @media screen and (min-width:768px) {
+            body {
+                width:768px;
+                margin:0 auto;
+            }
+            .footer{
+                width:768px;
+            }
+            .hint{
+               width:768px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+		<div class="header">
+			<div class="search"><img src="images/search.png" alt="" class="msg"><input type="text" name="" class="outline" placeholder="全球优质供应商直供"></div><img src="images/msg.png" alt="" class="msg">
+            <div class="nav">
+                <li>推荐</li>
+                <li>家饰</li>
+                <li class="active">收纳</li>
+                <li>餐厨</li>
+                <li>家纺</li>
+            </div>
+		</div>
+        <div class="section">
+            <div class="title">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background: url(images/box1.jpg);background-size:100% 100%;">
+                            <div class="title-desc">让生活多点空间</div>
+                        </div>
+                        <div class="swiper-slide" style="background: url(images/box2.jpg);background-size:100% 100%;">
+                            <div class="title-desc">让生活多点收纳</div>
+                        </div>
+                        <div class="swiper-slide" style="background: url(images/box3.jpg);background-size:100% 100%;">
+                            <div class="title-desc">让生活多点空间</div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <ul class="goods">
+                <li>
+                    <img src="images/goods1.png" alt="">
+                    <p>布艺袜子收纳盒</p>
+                    <span>￥39</span>
+                </li>
+                <li>
+                    <img src="images/goods2.png" alt="">
+                    <p>立体整理箱</p>
+                    <span>￥140</span>
+                </li>
+                <li>
+                    <img src="images/goods3.png" alt="">
+                    <p>抽屉式收纳盒</p>
+                    <span>￥350</span>
+                </li>
+                <li>
+                    <img src="images/goods4.png" alt="">
+                    <p>组合化妆盒</p>
+                    <span>￥60</span>
+                </li>
+                <li>
+                    <img src="images/goods1.png" alt="">
+                    <p>布艺袜子收纳盒</p>
+                    <span>￥39</span>
+                </li>
+                <li>
+                    <img src="images/goods2.png" alt="">
+                    <p>立体整理箱</p>
+                    <span>￥140</span>
+                </li>
+                <li>
+                    <img src="images/goods3.png" alt="">
+                    <p>抽屉式收纳盒</p>
+                    <span>￥350</span>
+                </li>
+                <li>
+                    <img src="images/goods4.png" alt="">
+                    <p>组合化妆盒</p>
+                    <span>￥60</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <ul class="nav-foot">
+                <li>
+                    <img src="images/icon/store-active.png" alt=""><br>
+                    <span class="active-fot">商城</span>
+                </li>
+                <li>
+                    <img src="images/icon/community.png" alt=""><br>
+                    <span>社区</span>
+                </li>
+                <li>
+                    <img src="images/icon/cart.png" alt=""><br>
+                    <span>购物车</span>
+                </li>
+                <li>
+                    <img src="images/icon/user.png" alt=""><br>
+                    <span>我的</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay : 3000,
+        autoplayDisableOnInteraction : false,
+        loop : true,
+    });
+    </script>
+</body>
+
+</html>
